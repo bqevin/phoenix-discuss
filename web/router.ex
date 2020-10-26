@@ -24,12 +24,12 @@ defmodule Discuss.Router do
     # Use the default browser stack
     pipe_through(:browser)
 
-    # get("/", TopicController, :index)
-    # get("/:id/edit", TopicController, :edit)
-    # get("/new", TopicController, :new)
-    # post("/", TopicController, :create)
-    # put("/:id", TopicController, :update)
-    resources("/", TopicController)
+    get("/", TopicController, :index)
+    get("/:id/edit", TopicController, :edit)
+    get("/new", TopicController, :new)
+    post("/", TopicController, :create)
+    put("/:id", TopicController, :update)
+    delete("/:id/delete", TopicController, :delete)
   end
 
   # Other scopes may use custom stacks.
